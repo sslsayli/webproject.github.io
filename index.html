@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-image: url("img2.jpeg");
+        }
+        
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            text-decoration: double;
+            margin-top: 30px;
+        }
+        
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .overlay a:hover,
+        .overlay a:focus {
+            color: white;
+        }
+        
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="w1.html">CLOUD TUTORIAL</a>
+            <a href="w2.html">TYPES OF CLOUD</a>
+            <a href="w3.html">CLOUD SERVICE MODELS</a>
+            <a href="w4.html">VIRTUALIZATION</a>
+            <a href="w5.html">CLOUD SERVICE PROVIDERS</a>
+            <a href="w6.html">MISCELLANEOUS</a>
+        </div>
+    </div>
+    <div class="overlay-content">
+        <h1>CLOUD COMPUTING</h1>
+    </div>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
